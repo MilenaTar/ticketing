@@ -20,8 +20,6 @@ and a **React** frontend styled with **Ant Design**. Users can:
   - [Create a Ticket](#create-a-ticket)
   - [List All Tickets](#list-all-tickets)
   - [Add a Reply](#add-a-reply)
-  - [View Analytics](#view-analytics)
-- [Project Structure](#-project-structure)
 - [Contributing](#-contributing)
 
 ---
@@ -81,7 +79,7 @@ docker-compose exec backend npx knex migrate:latest
 ### Create a Ticket
 
 ```bash
-curl -X POST http://localhost:3000/tickets \
+curl -X POST http://localhost:3030/tickets \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Sample Issue",
@@ -106,7 +104,7 @@ curl -X POST http://localhost:3000/tickets \
 ### List All Tickets
 
 ```bash
-curl http://localhost:3000/tickets
+curl http://localhost:3030/tickets
 ```
 
 **Response** (200 OK):
