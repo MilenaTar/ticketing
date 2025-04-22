@@ -2,7 +2,7 @@
 
 # Ticketing System 
 
-A **containerized** ticketing application built with **FeathersJS**, **Knex**, and **PostgreSQL** . Users can:
+A **containerized** ticketing application built with **FeathersJS**, **Knex**, and **PostgreSQL**
 and a **React** frontend styled with **Ant Design**. Users can:
 - 📝 **Create Tickets** with a title & description
 - 📋 **List Tickets** and view details
@@ -53,7 +53,7 @@ and a **React** frontend styled with **Ant Design**. Users can:
 
 ```bash
 git clone https://github.com/milenaTar/ticketing.git
-cd ticketing-system
+cd ticketing
 ```
 
 2. **Launch services**
@@ -67,8 +67,13 @@ docker-compose up --build
 ```bash
 docker-compose exec backend npx knex migrate:latest
 ```
+4. **Apply seeds**
 
-4. **Open in browser**
+```bash
+docker-compose exec backend npm run db:seed
+```
+
+5. **Open in browser**
 
    Navigate to [http://localhost:3000](http://localhost:3000)
 
@@ -84,7 +89,7 @@ curl -X POST http://localhost:3030/tickets \
   -d '{
     "title": "Sample Issue",
     "status": "Open",
-    "description": "Details about the issue...",
+    "description": "Details about the issue..."
   }'
 ```
 
@@ -117,7 +122,7 @@ curl http://localhost:3030/tickets
     "description": "Details about the issue...",
     "createdAt": "2025-04-22T10:15:00.000Z",
     "updatedAt": "2025-04-22T10:15:00.000Z",
-     "status": "Open" | "Closed",
+    "status": "Open"
   }
 ]
 ```
@@ -138,12 +143,25 @@ curl -X POST http://localhost:3030/replies \
 ```json
 {
     "id": 2,
-    "message": "I’m looking into this nowvvvvvvvvvvvvvvv.",
+    "message": "I’m looking into this now.",
     "ticketId": 1,
     "createdAt": "2025-04-21T20:28:00.321Z",
     "updatedAt": "2025-04-21T20:28:00.321Z"
 }
-``
+```
+⏱ Time Spent
+This project was developed over the course of approximately 12 hours, including time spent understanding the technologies involved and implementing both backend and frontend functionality.
+
+
+Task	Time Spent
+🧠 Learning FeathersJS (services, hooks, architecture)	2h
+🧠 Understanding Knex (migrations, seeds, query builder)	1.5h
+🧠 Exploring Atomic Design methodology for frontend structure	1h
+🧠 Getting familiar with Ant Design (form components & layout)	0.5h
+⚙️ Backend setup (FeathersJS, PostgreSQL, Docker, Knex)	2h
+📦 Implementing services: tickets, replies, and relationships	1.5h
+💻 Building the frontend (React, API integration, basic UI layout)	2.5h
+🧪 Testing, debugging, documentation	1h
 
 <p align="center">Made with ❤️ by milenaTar (https://github.com/milenaTar)</p>
 <!-- prettier-ignore-end -->

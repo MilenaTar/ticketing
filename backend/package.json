@@ -46,7 +46,8 @@
     "migrate:make": "knex migrate:make",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
-    "format": "prettier --write 'src/**/*.ts'"
+    "format": "prettier --write 'src/**/*.ts'",
+    "db:seed": "ts-node --transpile-only ./node_modules/knex/bin/cli.js seed:run --knexfile knexfile.ts --env development"
   },
   "dependencies": {
     "@feathersjs/adapter-commons": "^5.0.33",
