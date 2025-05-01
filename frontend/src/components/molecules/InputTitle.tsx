@@ -1,5 +1,5 @@
-import { Form, Input } from 'antd';
-import React from 'react';
+import { Input } from 'antd';
+import FormItemAtom from '../atoms/FormItemAtom';
 
 type Props = {
   placeholder?: string;
@@ -8,8 +8,8 @@ type Props = {
 };
 
 const InputTitle = ({ placeholder, name = 'title' }: Props) => (
-  <Form.Item name={name} label="Title" required rules={[{ required: true, message: 'Please enter a title' }]}>
+  <FormItemAtom name={name} label="Title" required rules={[{ required: true, message: 'Please enter a title' }]}>
     <Input placeholder={placeholder} />
-  </Form.Item>
+  </FormItemAtom>
 );
 export default InputTitle;
