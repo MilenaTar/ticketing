@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Form, Input } from 'antd';
+import { Form, Input } from 'antd';
 import { Rule } from 'antd/es/form';
+import ButtonAtom from '../atoms/ButtonAtom';
 
 interface Props {
   name: string;
@@ -21,9 +22,7 @@ const TextSubmitForm: React.FC<Props> = ({ name, loading, disabled, placeHolder,
         />
       </Form.Item>
       <Form.Item>
-        <Button htmlType="submit" type="primary" loading={loading} disabled={disabled}>
-          Submit
-        </Button>
+        <ButtonAtom label='Submit' htmlType="submit" type="primary" loading={loading} disabled={disabled} />
       </Form.Item>
     </>
   );

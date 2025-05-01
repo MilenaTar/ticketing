@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import ReplyForm from '../components/molecules/ReplyForm';
 import { Ticket } from '../types/Ticket.type';
 import { getTicketById } from '../services/api';
-import Loader from '../components/atoms/Loader';
 import { Divider } from 'antd';
 import TicketItem from '../components/molecules/TicketItem';
 import { RepliesList } from '../components/organisms/RepliesList';
+import Loader from '../components/molecules/Loader';
+import ReplyForm from '../components/organisms/ReplyForm';
 
 const SingleTicketPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();

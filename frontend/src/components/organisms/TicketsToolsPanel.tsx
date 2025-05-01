@@ -1,5 +1,6 @@
-import { Card, Row, Col, Radio, Button } from 'antd';
+import { Card, Row, Col, Radio } from 'antd';
 import { TicketStatus } from '../../types/Ticket.type';
+import ButtonAtom from '../atoms/ButtonAtom';
 
 const statusOptions = [
   { label: 'All', value: 'all' },
@@ -29,9 +30,7 @@ export const TicketsToolsPanel: React.FC<{
         </Radio.Group>
       </Col>
       <Col>
-        <Button type="primary" onClick={onCreate}>
-          Create new ticket
-        </Button>
+        <ButtonAtom label='Create new ticket' type="primary" onClick={onCreate} />
       </Col>
     </Row>
   </Card>

@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Form, Typography, message } from 'antd';
 import { ApiRequestMethod, customAxios } from '../services/custom-axios';
 import { TicketStatus } from '../types/Ticket.type';
+import InputTitle from '../components/molecules/InputTitle';
 import TextSubmitForm from '../components/molecules/TextSubmitForm';
-import InputTitle from '../components/atoms/InputTitle';
 
 const { Title } = Typography;
 

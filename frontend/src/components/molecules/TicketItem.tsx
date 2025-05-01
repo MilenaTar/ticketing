@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Card, Col } from 'antd';
-import { TicketStatusTag } from '../atoms/StatusTag';
+import { Card, Col } from 'antd';
 import { Ticket } from '../../types/Ticket.type';
 import { useNavigate } from 'react-router-dom';
-import { FormattedCreationDate } from '../atoms/FormattedCreationDate';
+import { FormattedCreationDate } from './FormattedCreationDate';
+import { TicketStatusTag } from './StatusTag';
+import ButtonAtom from '../atoms/ButtonAtom';
 
 interface Props {
   ticket: Ticket;
@@ -26,9 +27,7 @@ const TicketItem: React.FC<Props> = ({ ticket, isDetailedPage = false }) => {
         title={ticket.title}
         extra={
           !isDetailedPage && (
-            <Button onClick={() => handleView(ticket.id)} type="default">
-              View details
-            </Button>
+            <ButtonAtom label='View details' onClick={() => handleView(ticket.id)} type="default" />
           )
         }
         style={{ width: '100%', marginBottom: 16 }}

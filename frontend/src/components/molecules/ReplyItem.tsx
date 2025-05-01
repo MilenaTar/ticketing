@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, List } from 'antd';
 import { Reply } from '../../types/Reply.type';
-import { FormattedCreationDate } from '../atoms/FormattedCreationDate';
+import { FormattedCreationDate } from './FormattedCreationDate';
 
 interface Props {
   reply: Reply;

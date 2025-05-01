@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form } from 'antd';
 import { ApiRequestMethod, customAxios } from '../../services/custom-axios';
-import TextSubmitForm from './TextSubmitForm';
+import TextSubmitForm from '../molecules/TextSubmitForm';
 
 interface Props {
   ticketId: string;
@@ -20,7 +20,7 @@ const ReplyForm: React.FC<Props> = ({ ticketId, onReply }) => {
         requiresToken: false,
         body: JSON.stringify({
           ticketId,
-          message: values.reply, // ✅ Access value here
+          message: values.reply,
         }),
       });
       onReply();

@@ -5,8 +5,8 @@ import { TicketList } from '../components/organisms/TicketList';
 import { Alert, Pagination } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { TicketsToolsPanel } from '../components/organisms/TicketsToolsPanel';
-import Loader from '../components/atoms/Loader';
 import { TicketListResponse } from '../types/TicketsList.type';
+import Loader from '../components/molecules/Loader';
 
 const PAGE_SIZE = 10;
 const TicketsListPage: React.FC = () => {

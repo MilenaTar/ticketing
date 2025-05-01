@@ -4,11 +4,11 @@ import type { ColumnsType } from 'antd/es/table';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { getSummaryData } from '../services/api';
-import Loader from '../components/atoms/Loader';
 import { Ticket } from '../types/Ticket.type';
-import { TicketStatusTag } from '../components/atoms/StatusTag';
 import { TicketsStats, TicketsSummary } from '../types/Summary.type';
-import { CardWithTitle } from '../components/atoms/CardWithTitle';
+import { CardWithTitle } from '../components/molecules/CardWithTitle';
+import Loader from '../components/molecules/Loader';
+import { TicketStatusTag } from '../components/molecules/StatusTag';
 
 const DashboardPage: React.FC = () => {
   const [tickets, setTickets] = useState<Ticket[]>([]);
